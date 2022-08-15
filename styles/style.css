@@ -5,98 +5,111 @@
   font-family: "M PLUS Rounded 1c";
 }
 
-.hero {
-  height: 100vh;
+header nav {
   width: 100%;
-  background-color: #101010;
-}
-.hero nav {
+  height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 45px 8% 0 8%;
+  padding: 15px 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #191919;
 }
-.hero nav .logo {
+header nav .logo {
   color: white;
   font-size: 35px;
   letter-spacing: 1px;
   cursor: pointer;
 }
-.hero nav .logo span {
+header nav .logo span {
   color: lightseagreen;
 }
-.hero nav ul li {
+header nav ul {
+  padding-left: 900px;
+}
+header nav ul li {
   display: inline-block;
   padding: 10px 25px;
 }
-.hero nav ul li a {
+header nav ul li a {
+  position: relative;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100%/var(--d, 0) 2px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
 }
-.hero nav ul li a:hover {
+header nav ul li a:hover {
+  --d: 100%;
+  --p: 100%;
   color: lightseagreen;
 }
-.hero nav .btn {
+header nav .btn {
   background-color: lightseagreen;
+  padding: 13px 30px;
   color: white;
-  padding: 10px 25px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
   transition: all 0.3s;
 }
-.hero nav .btn:hover {
-  transform: scale(1.2);
-  border-radius: 20px;
+header nav .btn:hover {
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  cursor: pointer;
 }
-.hero .content {
+
+.content {
+  height: 100vh;
+  width: 100%;
+  background-color: #101010;
   padding-top: 230px;
 }
-.hero .content .body {
+.content .body {
   display: flex;
   justify-content: space-evenly;
   padding-right: 50px;
   padding-left: 270px;
 }
-.hero .content .body img {
-  width: 1080px;
+.content .body img {
+  width: 980px;
   height: 720px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  margin-top: -150px;
+  margin-top: -100px;
 }
-.hero .content .body .pInfo h1 {
+.content .body .pInfo h1 {
   color: white;
   margin: 20px 0 20px;
   font-size: 75px;
 }
-.hero .content .body .pInfo h1 span {
+.content .body .pInfo h1 span {
   color: lightseagreen;
 }
-.hero .content .body .pInfo h3 {
+.content .body .pInfo h3 {
   color: white;
   font-size: 25px;
   margin-bottom: 50px;
 }
-.hero .content .body .pInfo h4 {
+.content .body .pInfo h4 {
   color: white;
   letter-spacing: 2px;
   font-size: 20px;
 }
-.hero .content .body .pInfo .newslatter from {
+.content .body .pInfo .newslatter from {
   width: 380px;
   position: relative;
 }
-.hero .content .body .pInfo .newslatter from input:first-child {
+.content .body .pInfo .newslatter from input:first-child {
   width: 100%;
   padding: 15px 130px 15px 15px;
   outline: none;
   border: 2px solid lightseagreen;
   border-radius: 30px;
 }
-.hero .content .body .pInfo .newslatter from input:last-child {
+.content .body .pInfo .newslatter from input:last-child {
   position: absolute;
   border: none;
   top: -7px;
@@ -159,7 +172,7 @@
 }
 .about .main button:hover {
   background-color: transparent;
-  border: 2px solid green;
+  border: 2px solid lightseagreen;
   cursor: pointer;
 }
 
@@ -217,7 +230,7 @@
 }
 .portfolio .box .card .pragraph .button:hover {
   background-color: transparent;
-  border: 2px solid green;
+  border: 2px solid lightseagreen;
   cursor: pointer;
 }
 
@@ -247,7 +260,7 @@
 }
 .contact .contact-button:hover {
   background-color: transparent;
-  border: 2px solid green;
+  border: 2px solid lightseagreen;
   cursor: pointer;
 }
 
