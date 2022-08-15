@@ -1,1 +1,1 @@
-[kamaaki.github.io](https://kamaaki.github.io/){:target="_blank"}
+[kamaaki.github.io](https://kamaaki.github.io/)
