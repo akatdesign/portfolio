@@ -20,11 +20,19 @@ header nav {
   padding: 15px 200px;
   background-color: #191919;
 }
+@media screen and (max-width: 1024px) {
+  header nav {
+    padding: 15px 10px;
+  }
+}
 header nav .logo {
-  color: white;
   font-size: 35px;
   letter-spacing: 1px;
   cursor: pointer;
+}
+header nav .logo a {
+  color: white;
+  text-decoration: none;
 }
 header nav .logo span {
   color: lightseagreen;
@@ -103,7 +111,7 @@ header nav .burger {
 header nav .burger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: lightseagreen;
   margin: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -123,11 +131,23 @@ header nav .toggle .line3 {
   background-color: #101010;
   padding-top: 150px;
 }
+@media screen and (max-width: 768px) {
+  .content {
+    height: 650px;
+    padding-top: 0;
+  }
+}
 .content .body {
   display: flex;
   justify-content: space-evenly;
   padding-right: 50px;
   padding-left: 270px;
+}
+@media screen and (max-width: 768px) {
+  .content .body {
+    flex-direction: column;
+    margin-left: -250px;
+  }
 }
 .content .body img {
   width: 980px;
@@ -136,6 +156,13 @@ header nav .toggle .line3 {
      object-fit: cover;
   border-radius: 20px;
   margin-top: -100px;
+}
+@media screen and (max-width: 768px) {
+  .content .body img {
+    width: 320px;
+    height: 300px;
+    margin-top: 50px;
+  }
 }
 .content .body .pInfo h1 {
   color: white;
@@ -167,11 +194,21 @@ header nav .toggle .line3 {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (max-width: 1024px) {
+  .about .main {
+    width: 100%;
+  }
+}
 .about .main img {
   width: 430px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .about .main img {
+    display: none;
+  }
 }
 .about .main .aboutText {
   width: 550px;
@@ -194,20 +231,6 @@ header nav .toggle .line3 {
   margin-bottom: 45px;
   font-size: 18px;
 }
-.about .main button {
-  background-color: lightseagreen;
-  padding: 13px 30px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.3s;
-}
-.about .main button:hover {
-  background-color: transparent;
-  border: 2px solid lightseagreen;
-  cursor: pointer;
-}
 
 .portfolio {
   background-color: #101010;
@@ -226,8 +249,13 @@ header nav .toggle .line3 {
   justify-content: center;
   min-height: 400px;
 }
+@media screen and (max-width: 768px) {
+  .portfolio .box {
+    flex-direction: column;
+  }
+}
 .portfolio .box .card {
-  height: 390px;
+  height: 350px;
   width: 365px;
   background-color: #191919;
   padding: 20px 35px;
@@ -251,20 +279,6 @@ header nav .toggle .line3 {
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 30px;
-}
-.portfolio .box .card .pragraph .button {
-  background-color: lightseagreen;
-  padding: 13px 30px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.3s;
-}
-.portfolio .box .card .pragraph .button:hover {
-  background-color: transparent;
-  border: 2px solid lightseagreen;
-  cursor: pointer;
 }
 
 .contact {
