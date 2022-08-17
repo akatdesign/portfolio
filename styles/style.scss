@@ -1,4 +1,5 @@
-@import "./button1";
+@use "./button1" as b1;
+@use "./responsive" as res;
 
 * {
     margin: 0;
@@ -6,16 +7,19 @@
     box-sizing: border-box;
     font-family: "M PLUS Rounded 1c";
 }
+body {
+    @include res.mq('sm') {
+        overflow-x: hidden;
+    }
+}
 header {
     nav {
         width: 100%;
         height: 100px;
         display: flex;
         align-items: center;
+        justify-content: space-around;
         padding: 15px 200px;
-        position: fixed;
-        top: 0;
-        left: 0;
         background-color: #191919;
         .logo {
             color: white;
@@ -26,31 +30,79 @@ header {
                 color: lightseagreen;
             }
         }
-        ul {
-            padding-left: 900px;
+        .nav-active {
+            transform: translateX(0%) !important;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            // padding-left: 900px;
+            transition: all 0.5s ease-in-out;
+            @include res.mq('md') {
+                width: 55%;
+            }
+            @include res.mq('sm') {
+                position: absolute;
+                right: 0;
+                height: 92vh;
+                top: 8vh;
+                background-color: #191919;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateX(100%);
+            }
             li{
-                display: inline-block;
-                padding: 10px 25px;
-                a {
-                    position: relative;
-                    color: white;
-                    text-decoration: none;
-                    font-weight: bold;
-                    background:
-                        linear-gradient(currentColor 0 0)
-                        var(--p, 0) 100% /var(--d, 0) 2px
-                        no-repeat;
-                    transition: 0.3s, background-position 0s 0.3s;
-                    &:hover {
-                        --d: 100%;
-                        --p: 100%;
-                        color: lightseagreen;
-                    }
+                list-style: none;
+                @include res.mq('sm') {
+                    opacity: 0;
                 }
             }
+            a {
+                position: relative;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                background:
+                    linear-gradient(currentColor 0 0)
+                    var(--p, 0) 100% /var(--d, 0) 2px
+                    no-repeat;
+                transition: 0.3s, background-position 0s 0.3s;
+                &:hover {
+                    --d: 100%;
+                    --p: 100%;
+                    color: lightseagreen;
+                }
+            }
+            .btn {
+                @include b1.button;
+            }
         }
-        .btn {
-            @include button;
+        .burger {
+            display: none;
+            @include res.mq('sm') {
+                display: block;
+            }
+            cursor: pointer;
+            div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+        .toggle {
+            .line1 {
+                transform: rotate(-405deg) translate(-5px, 6px);
+            }
+            .line2 {
+                opacity: 0;
+            }
+            .line3 {
+                transform: rotate(405deg) translate(-5px, -6px);
+            }
         }
     }
 }
@@ -60,7 +112,7 @@ header {
     height: 100vh;
     width: 100%;
     background-color: #101010;
-    padding-top: 230px;
+    padding-top: 150px;
         .body {
         display: flex;
         justify-content: space-evenly;
@@ -75,7 +127,7 @@ header {
         }
         .pInfo {
             h1 {
-                 color: white;
+                color: white;
                 margin: 20px 0 20px;
                 font-size: 75px;
                 span {
@@ -85,37 +137,12 @@ header {
             h3 {
                 color: white;
                 font-size: 25px;
-                margin-bottom: 50px;
+                // margin-bottom: 50px;
             }
             h4 {
                 color: white;
                 letter-spacing: 2px;
                 font-size: 20px;
-            }
-            .newslatter {
-                from {
-                    width: 380px;
-                    position: relative;
-                    input:first-child {
-                        width: 100%;
-                        padding: 15px 130px 15px 15px;
-                        outline: none;
-                        border: 2px solid lightseagreen;
-                        border-radius: 30px;
-                    }
-                    input:last-child {
-                        position: absolute;
-                        border: none;
-                        top: -7px;
-                        right: 6px;
-                        padding: 10px 30px;
-                        background-color: lightseagreen;
-                        border-radius: 30px;
-                        color: white;
-                        cursor: pointer;
-                        box-shadow: 1px 1px 10px black;
-                    }
-                 }
             }
         }
     }
@@ -158,7 +185,7 @@ header {
             }
         }
         button {
-            @include button;
+            @include b1.button;
         }
     }
 }
@@ -206,7 +233,7 @@ header {
                     margin-bottom: 30px;
                 }
                 .button {
-                    @include button;
+                    @include b1.button;
                 }
             }
         }
@@ -227,7 +254,7 @@ header {
         margin-bottom: 25px;
     }
     .contact-button {
-        @include button;
+        @include b1.button;
     }
 }
 footer {
@@ -275,5 +302,20 @@ footer {
         color: white;
         margin-top: 100px;
         font-size: 16px;
+    }
+    .end2 {
+        color: white;
+        font-size: 16px;
+    }
+}
+
+@keyframes navLinksFade{
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
