@@ -30,6 +30,11 @@ header nav {
     padding: 0 50px;
   }
 }
+@media screen and (max-width: 768px) {
+  header nav {
+    padding: 0 10px;
+  }
+}
 header nav .logo {
   font-size: 35px;
   letter-spacing: 1px;
@@ -47,7 +52,7 @@ header nav .nav-active {
 }
 header nav .nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 40%;
   transition: all 0.5s ease-in-out;
 }
@@ -105,7 +110,9 @@ header nav .nav-links .btn:hover {
   cursor: pointer;
 }
 header nav .burger {
-  display: none;
+  height: 0;
+  visibility: hidden;
+  width: 0;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {

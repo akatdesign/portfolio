@@ -28,6 +28,9 @@ header {
         @include res.mq('lg') {
             padding: 0 50px;
         }
+        @include res.mq('sm') {
+            padding: 0 10px;
+        }
         .logo {
             font-size: 35px;
             letter-spacing: 1px;
@@ -45,7 +48,7 @@ header {
         }
         .nav-links {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             width: 40%;
             // padding-left: 900px;
             transition: all 0.5s ease-in-out;
@@ -90,7 +93,10 @@ header {
             }
         }
         .burger {
-            display: none;
+            // display: none;
+            height: 0;
+            visibility: hidden;
+            width: 0;
             @include res.mq('sm') {
                 display: block;
             }
