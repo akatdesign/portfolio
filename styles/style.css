@@ -11,18 +11,23 @@
   }
 }
 
-header nav {
+header {
   width: 100%;
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 15px 200px;
   background-color: #191919;
 }
-@media screen and (max-width: 1024px) {
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+  background-color: #191919;
+}
+@media screen and (max-width: 1200px) {
   header nav {
-    padding: 15px 10px;
+    padding: 0 10px;
   }
 }
 header nav .logo {
@@ -42,7 +47,7 @@ header nav .nav-active {
 }
 header nav .nav-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 40%;
   transition: all 0.5s ease-in-out;
 }
@@ -55,8 +60,8 @@ header nav .nav-links {
   header nav .nav-links {
     position: absolute;
     right: 0;
-    height: 92vh;
-    top: 8vh;
+    height: 90vh;
+    top: 10vh;
     background-color: #191919;
     flex-direction: column;
     align-items: center;

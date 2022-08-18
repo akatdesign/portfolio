@@ -1,8 +1,9 @@
 $sizes: xl, lg ,md ,sm, xs;
 
 $breakpoint: (
+    'sm': 'screen and (max-width: 768px)',
     'md': 'screen and (max-width: 1024px)',
-    'sm': 'screen and (max-width: 768px)'
+    'lg': 'screen and (max-width: 1200px)'
 )!default;
 
 @mixin mq($size: md) {
