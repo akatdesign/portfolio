@@ -110,9 +110,7 @@ header nav .nav-links .btn:hover {
   cursor: pointer;
 }
 header nav .burger {
-  height: 0;
-  visibility: hidden;
-  width: 0;
+  display: none;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
@@ -135,6 +133,10 @@ header nav .toggle .line2 {
 }
 header nav .toggle .line3 {
   transform: rotate(405deg) translate(-5px, -6px);
+}
+
+.selector-hide {
+  display: none;
 }
 
 .content {

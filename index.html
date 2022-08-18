@@ -24,7 +24,7 @@
             </ul>
 
             <!-- burger menu-->
-            <div class="burger">
+            <div class="burger" id="burgerMenu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -133,5 +133,9 @@
 
 
     <script src="burger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#burgerMenu').wrap('<span class="selector-hide">');
+        </script>
 </body>
 </html>
