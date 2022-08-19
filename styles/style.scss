@@ -11,6 +11,7 @@
 .wrapper {
     @include res.mq('sm') {
         overflow-x: hidden;
+        position: relative;
     }
 }
 header {
