@@ -14,7 +14,7 @@
 
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: #191919;
 }
 header nav {
@@ -158,6 +158,11 @@ header nav .toggle .line3 {
   padding-right: 50px;
   padding-left: 270px;
 }
+@media screen and (max-width: 1200px) {
+  .content .body {
+    margin-left: -150px;
+  }
+}
 @media screen and (max-width: 768px) {
   .content .body {
     flex-direction: column;
@@ -171,6 +176,12 @@ header nav .toggle .line3 {
      object-fit: cover;
   border-radius: 20px;
   margin-top: -100px;
+}
+@media screen and (max-width: 1024px) {
+  .content .body img {
+    width: 400px;
+    height: 550;
+  }
 }
 @media screen and (max-width: 768px) {
   .content .body img {
@@ -187,6 +198,11 @@ header nav .toggle .line3 {
 .content .body .pInfo h1 span {
   color: lightseagreen;
 }
+@media screen and (max-width: 768px) {
+  .content .body .pInfo h1 {
+    margin: 5px 0 5px;
+  }
+}
 .content .body .pInfo h3 {
   color: white;
   font-size: 25px;
@@ -196,7 +212,6 @@ header nav .toggle .line3 {
   letter-spacing: 2px;
   font-size: 20px;
 }
-
 .about {
   width: 100%;
   padding: 100px 0;
@@ -209,7 +224,7 @@ header nav .toggle .line3 {
   align-items: center;
   justify-content: space-around;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .about .main {
     width: 100%;
   }
@@ -219,6 +234,11 @@ header nav .toggle .line3 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .about .main img {
+    width: 300px;
+  }
 }
 @media screen and (max-width: 768px) {
   .about .main img {
