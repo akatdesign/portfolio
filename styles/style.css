@@ -180,7 +180,7 @@ header nav .toggle .line3 {
 @media screen and (max-width: 1024px) {
   .content .body img {
     width: 400px;
-    height: 550;
+    height: 550px;
   }
 }
 @media screen and (max-width: 768px) {
