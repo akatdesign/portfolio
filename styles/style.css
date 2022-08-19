@@ -6,9 +6,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  .wrapper {
     overflow-x: hidden;
-    position: relative;
   }
 }
 
