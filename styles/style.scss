@@ -59,8 +59,8 @@ header {
             @include res.mq('sm') {
                 position: absolute;
                 right: 0;
-                height: 90vh;
-                top: 10vh;
+                height: 100vh;
+                top: 5vh;
                 background-color: c.$subBlack;
                 flex-direction: column;
                 align-items: center;
