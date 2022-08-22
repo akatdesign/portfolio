@@ -318,7 +318,10 @@ header {
     }
     .contact-button {
         @include b1.button;
-        color: white;
+        color: c.$textColor;
+        &:hover {
+            color: lightseagreen;
+        }
     }
 }
 footer {

@@ -363,12 +363,15 @@ header nav .toggle .line3 {
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.3s;
-  color: white;
+  color: var(--color-text);
 }
 .contact .contact-button:hover {
   background-color: transparent;
   border: 2px solid lightseagreen;
   cursor: pointer;
+}
+.contact .contact-button:hover {
+  color: lightseagreen;
 }
 
 footer {
