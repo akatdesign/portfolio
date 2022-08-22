@@ -109,6 +109,21 @@ header nav .nav-links li {
     opacity: 0;
   }
 }
+header nav .nav-links li #toggleTheme {
+  cursor: pointer;
+  background-color: lightseagreen;
+  padding: 13px 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+header nav .nav-links li #toggleTheme:hover {
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  cursor: pointer;
+}
 header nav .nav-links a {
   position: relative;
   color: var(--color-text);
