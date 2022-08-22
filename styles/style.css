@@ -113,7 +113,6 @@ header nav .nav-links li #toggleTheme {
   cursor: pointer;
   background-color: lightseagreen;
   padding: 13px 30px;
-  color: white;
   font-weight: bold;
   text-decoration: none;
   border-radius: 30px;
@@ -360,11 +359,11 @@ header nav .toggle .line3 {
 .contact .contact-button {
   background-color: lightseagreen;
   padding: 13px 30px;
-  color: white;
   font-weight: bold;
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.3s;
+  color: white;
 }
 .contact .contact-button:hover {
   background-color: transparent;

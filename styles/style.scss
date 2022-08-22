@@ -318,6 +318,7 @@ header {
     }
     .contact-button {
         @include b1.button;
+        color: white;
     }
 }
 footer {
