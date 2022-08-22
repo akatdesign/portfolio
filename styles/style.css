@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+@media (prefers-color-sheme: light) {
   :root {
     --color-base: #f5f5f5;
     --color-sub: white;
@@ -11,6 +11,17 @@
     --color-sub: #191919;
     --color-text: white;
   }
+}
+.light {
+  --color-base: #f5f5f5;
+  --color-sub: white;
+  --color-text: black;
+}
+
+.dark {
+  --color-base: #101010;
+  --color-sub: #191919;
+  --color-text: white;
 }
 
 * {
