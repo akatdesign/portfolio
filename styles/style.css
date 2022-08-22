@@ -157,7 +157,7 @@ header nav .toggle .line3 {
 }
 .content .body img {
   width: 980px;
-  height: 720px;
+  height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
