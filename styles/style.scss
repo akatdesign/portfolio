@@ -89,9 +89,9 @@ header {
                     color: c.$accent;
                 }
             }
-            .btn {
-                @include b1.button;
-            }
+            // .btn {
+                // @include b1.button;
+            // }
         }
         .burger {
             display: none;
