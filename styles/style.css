@@ -1,3 +1,18 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-base: #f5f5f5;
+    --color-sub: white;
+    --color-text: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #101010;
+    --color-sub: #191919;
+    --color-text: white;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +30,7 @@
 header {
   width: 100%;
   height: 80px;
-  background-color: #191919;
+  background-color: var(--color-sub);
 }
 header nav {
   width: 100%;
@@ -24,7 +39,7 @@ header nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 200px;
-  background-color: #191919;
+  background-color: var(--color-sub);
 }
 @media screen and (max-width: 1200px) {
   header nav {
@@ -42,7 +57,7 @@ header nav .logo {
   cursor: pointer;
 }
 header nav .logo a {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
 }
 header nav .logo span {
@@ -68,7 +83,7 @@ header nav .nav-links {
     right: 0;
     height: 100vh;
     top: 5vh;
-    background-color: #191919;
+    background-color: var(--color-sub);
     flex-direction: column;
     align-items: center;
     width: 50%;
@@ -85,7 +100,7 @@ header nav .nav-links li {
 }
 header nav .nav-links a {
   position: relative;
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: bold;
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100%/var(--d, 0) 2px no-repeat;
@@ -129,7 +144,7 @@ header nav .toggle .line3 {
 .content {
   height: 100vh;
   width: 100%;
-  background-color: #101010;
+  background-color: var(--color-base);
   padding-top: 150px;
 }
 @media screen and (max-width: 768px) {
@@ -176,7 +191,7 @@ header nav .toggle .line3 {
   }
 }
 .content .body .pInfo h1 {
-  color: white;
+  color: var(--color-text);
   margin: 20px 0 20px;
   font-size: 75px;
 }
@@ -189,18 +204,18 @@ header nav .toggle .line3 {
   }
 }
 .content .body .pInfo h3 {
-  color: white;
+  color: var(--color-text);
   font-size: 25px;
 }
 .content .body .pInfo h4 {
-  color: white;
+  color: var(--color-text);
   letter-spacing: 2px;
   font-size: 20px;
 }
 .about {
   width: 100%;
   padding: 100px 0;
-  background-color: #191919;
+  background-color: var(--color-sub);
 }
 .about .main {
   width: 1130px;
@@ -234,18 +249,18 @@ header nav .toggle .line3 {
   width: 550px;
 }
 .about .main .aboutText h2 {
-  color: white;
+  color: var(--color-text);
   font-size: 75px;
   margin-bottom: 20px;
 }
 .about .main .aboutText h5 {
-  color: white;
+  color: var(--color-text);
   letter-spacing: 1px;
   font-size: 22px;
   margin-bottom: 25px;
 }
 .about .main .aboutText p {
-  color: white;
+  color: var(--color-text);
   letter-spacing: 1px;
   line-height: 25px;
   margin-bottom: 45px;
@@ -253,12 +268,12 @@ header nav .toggle .line3 {
 }
 
 .portfolio {
-  background-color: #101010;
+  background-color: var(--color-base);
   width: 100%;
   padding: 100px 0;
 }
 .portfolio .title h2 {
-  color: white;
+  color: var(--color-text);
   font-size: 75px;
   margin: 30px auto;
   text-align: center;
@@ -277,7 +292,7 @@ header nav .toggle .line3 {
 .portfolio .box .card {
   height: 350px;
   width: 365px;
-  background-color: #191919;
+  background-color: var(--color-sub);
   padding: 20px 35px;
   margin: 20px;
   border-radius: 20px;
@@ -290,12 +305,12 @@ header nav .toggle .line3 {
   margin: 25px 0;
 }
 .portfolio .box .card h5 {
-  color: white;
+  color: var(--color-text);
   font-size: 23px;
   margin-bottom: 30px;
 }
 .portfolio .box .card .pragraph p {
-  color: white;
+  color: var(--color-text);
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 30px;
@@ -308,10 +323,10 @@ header nav .toggle .line3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #191919;
+  background-color: var(--color-sub);
 }
 .contact p {
-  color: white;
+  color: var(--color-text);
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 25px;
@@ -335,7 +350,7 @@ footer {
   position: relative;
   width: 100%;
   height: 400px;
-  background-color: #101010;
+  background-color: var(--color-base);
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -343,13 +358,13 @@ footer {
 }
 footer p:nth-child(1) {
   font-size: 30px;
-  color: white;
+  color: var(--color-text);
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
 }
 footer p:nth-child(2) {
-  color: white;
+  color: var(--color-text);
   font-size: 17px;
   width: 500px;
   text-align: center;
@@ -367,19 +382,19 @@ footer .social a {
   justify-content: center;
   text-decoration: none;
   margin: 22px 10px;
-  color: white;
+  color: var(--color-text);
   transition: all 0.3s;
 }
 footer .social a:hover {
   transform: scale(1.3);
 }
 footer .end {
-  color: white;
+  color: var(--color-text);
   margin-top: 100px;
   font-size: 16px;
 }
 footer .end2 {
-  color: white;
+  color: var(--color-text);
   font-size: 16px;
 }
 

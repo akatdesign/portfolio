@@ -1,4 +1,17 @@
+:root{
+    @media (prefers-color-scheme: light) {
+        --color-base: #f5f5f5;
+        --color-sub: white;
+        --color-text: black;
+    }
+    @media (prefers-color-scheme: dark) {
+        --color-base: #101010;
+        --color-sub: #191919;
+        --color-text: white;
+    }
+}
+
 $accent: lightseagreen;
-$mainBlack: #101010;
-$subBlack: #191919;
-$white: white;
+$mainColor: var(--color-base);
+$subColor: var(--color-sub);
+$textColor: var(--color-text);
