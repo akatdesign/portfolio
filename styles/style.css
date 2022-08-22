@@ -446,4 +446,16 @@ footer .end2 {
     opacity: 1;
     transform: translateX(0);
   }
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightseagreen;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

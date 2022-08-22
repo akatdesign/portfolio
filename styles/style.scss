@@ -386,3 +386,15 @@ footer {
         transform: translateX(0);
     }
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: black;
+    // border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: lightseagreen;
+    border-radius: 10px;
+  }
