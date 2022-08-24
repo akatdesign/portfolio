@@ -452,7 +452,7 @@ footer .end2 {
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: var(--color-base);
 }
 
 ::-webkit-scrollbar-thumb {
