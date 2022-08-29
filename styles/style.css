@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Chakra Petch", "M PLUS Rounded 1c";
+  font-family: "Chakra Petch", "M PLUS Rounded 1c", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
