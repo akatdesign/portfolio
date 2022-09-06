@@ -1,4 +1,4 @@
 var typed = new Typed('.element', {
-    strings: ["aaaaaaaaaaaa"],
+    strings: ["(=^･ω･^=)"],
     typeSpeed: 30,
   });
