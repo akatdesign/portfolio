@@ -254,23 +254,6 @@ header nav .toggle .line3 {
     width: 100%;
   }
 }
-.about .main img {
-  width: 430px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-}
-@media screen and (max-width: 1024px) {
-  .about .main img {
-    width: 20vh;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  .about .main img {
-    display: none;
-  }
-}
 .about .main .aboutText {
   width: 550px;
 }

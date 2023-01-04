@@ -3,402 +3,386 @@
 @use "./color" as c;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Chakra Petch", "M PLUS Rounded 1c","Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", "M PLUS Rounded 1c", "Helvetica Neue",
+    "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial",
+    "Yu Gothic", "Meiryo", sans-serif;
 }
 .wrapper {
-    @include res.mq('sm') {
-        overflow-x: hidden;
-        position: relative;
-    }
+  @include res.mq("sm") {
+    overflow-x: hidden;
+    position: relative;
+  }
 }
 header {
+  width: 100%;
+  height: 80px;
+  background-color: c.$subColor;
+  nav {
     width: 100%;
-    height: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
     background-color: c.$subColor;
-    nav {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 100px;
-        background-color: c.$subColor;
-        @include res.mq('lg') {
-            padding: 0 50px;
-        }
-        @include res.mq('sm') {
-            padding: 0 10px;
-        }
-        .logo {
-            font-size: 35px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            a {
-                color: c.$textColor;
-                text-decoration: none;
-            }
-            span {
-                color: c.$accent;
-            }
-        }
-        .nav-active {
-            transform: translateX(0%) !important;
-        }
-        .nav-links {
-            display: flex;
-            justify-content: space-around;
-            width: 40%;
-            // padding-left: 900px;
-            transition: all 0.5s ease-in-out;
-            @include res.mq('md') {
-                width: 55%;
-            }
-            @include res.mq('sm') {
-                position: absolute;
-                right: 0;
-                height: 100vh;
-                top: 5vh;
-                background-color: c.$subColor;
-                flex-direction: column;
-                align-items: center;
-                width: 50%;
-                transform: translateX(100%);
-            }
-            li{
-                list-style: none;
-                @include res.mq('sm') {
-                    opacity: 0;
-                }
-                #toggleTheme {
-                    cursor: pointer;
-                    @include b1.button;
-                }
-            }
-            a {
-                position: relative;
-                color: c.$textColor;
-                text-decoration: none;
-                font-weight: bold;
-                background:
-                    linear-gradient(currentColor 0 0)
-                    var(--p, 0) 100% /var(--d, 0) 2px
-                    no-repeat;
-                transition: 0.3s, background-position 0s 0.3s;
-                &:hover {
-                    --d: 100%;
-                    --p: 100%;
-                    color: c.$accent;
-                }
-            }
-            // .btn {
-                // @include b1.button;
-            // }
-        }
-        .burger {
-            display: none;
-            @include res.mq('sm') {
-                display: block;
-            }
-            cursor: pointer;
-            div {
-                width: 25px;
-                height: 3px;
-                background-color: c.$accent;
-                margin: 5px;
-                transition: all 0.5s ease-in-out;
-            }
-        }
-        .toggle {
-            .line1 {
-                transform: rotate(-405deg) translate(-5px, 6px);
-            }
-            .line2 {
-                opacity: 0;
-            }
-            .line3 {
-                transform: rotate(405deg) translate(-5px, -6px);
-            }
-        }
+    @include res.mq("lg") {
+      padding: 0 50px;
     }
+    @include res.mq("sm") {
+      padding: 0 10px;
+    }
+    .logo {
+      font-size: 35px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      a {
+        color: c.$textColor;
+        text-decoration: none;
+      }
+      span {
+        color: c.$accent;
+      }
+    }
+    .nav-active {
+      transform: translateX(0%) !important;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+      // padding-left: 900px;
+      transition: all 0.5s ease-in-out;
+      @include res.mq("md") {
+        width: 55%;
+      }
+      @include res.mq("sm") {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 5vh;
+        background-color: c.$subColor;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+      }
+      li {
+        list-style: none;
+        @include res.mq("sm") {
+          opacity: 0;
+        }
+        #toggleTheme {
+          cursor: pointer;
+          @include b1.button;
+        }
+      }
+      a {
+        position: relative;
+        color: c.$textColor;
+        text-decoration: none;
+        font-weight: bold;
+        background: linear-gradient(currentColor 0 0) var(--p, 0) 100% /
+          var(--d, 0) 2px no-repeat;
+        transition: 0.3s, background-position 0s 0.3s;
+        &:hover {
+          --d: 100%;
+          --p: 100%;
+          color: c.$accent;
+        }
+      }
+      // .btn {
+      // @include b1.button;
+      // }
+    }
+    .burger {
+      display: none;
+      @include res.mq("sm") {
+        display: block;
+      }
+      cursor: pointer;
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: c.$accent;
+        margin: 5px;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .toggle {
+      .line1 {
+        transform: rotate(-405deg) translate(-5px, 6px);
+      }
+      .line2 {
+        opacity: 0;
+      }
+      .line3 {
+        transform: rotate(405deg) translate(-5px, -6px);
+      }
+    }
+  }
 }
 
 .selector-hide {
-    display: none;
+  display: none;
 }
 
-
 .content {
-    height: 100vh;
-    width: 100%;
-    background-color: c.$mainColor;
-    padding-top: 150px;
-    @include res.mq('sm') {
-        height: 650px;
-        padding-top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: c.$mainColor;
+  padding-top: 150px;
+  @include res.mq("sm") {
+    height: 650px;
+    padding-top: 0;
+  }
+  .body {
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 50px;
+    padding-left: 100px;
+    @include res.mq("lg") {
+      // margin-left: -150px;
     }
-    .body {
-        display: flex;
-        justify-content: space-evenly;
-        padding-right: 50px;
-        padding-left: 100px;
-        @include res.mq('lg') {
-            // margin-left: -150px;
-        }
-        @include res.mq('sm') {
-            flex-direction: column;
-            margin-left: -70px;
-        }
-        img {
-            width: 80vh;
-            height: 80vh;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-top: -100px;
-            @include res.mq('lg') {
-                width: 50vh;
-            }
-            @include res.mq('md') {
-                width: 400px;
-            }
-            @include res.mq('sm') {
-                width: 320px;
-                height: 300px;
-                margin-top: 50px;
-            }
-        }
-        .pInfo {
-            h1 {
-                color: c.$textColor;
-                margin: 20px 0 20px;
-                font-size: 75px;
-                span {
-                    color: c.$accent;
-                }
-                @include res.mq('sm') {
-                    // font-size: 50px;
-                    margin: 5px 0 5px;
-                }
-            }
-            h3 {
-                color: c.$textColor;
-                font-size: 25px;
-                // margin-bottom: 50px;
-                @include res.mq('sm') {
-                    // font-size: 15px;
-                }
-            }
-            h4 {
-                color: c.$textColor;
-                letter-spacing: 2px;
-                font-size: 20px;
-                @include res.mq('sm') {
-                    // font-size: 10px;
-                }
-            }
-        }
+    @include res.mq("sm") {
+      flex-direction: column;
+      margin-left: -70px;
     }
+    img {
+      width: 80vh;
+      height: 80vh;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-top: -100px;
+      @include res.mq("lg") {
+        width: 50vh;
+      }
+      @include res.mq("md") {
+        width: 400px;
+      }
+      @include res.mq("sm") {
+        width: 320px;
+        height: 300px;
+        margin-top: 50px;
+      }
+    }
+    .pInfo {
+      h1 {
+        color: c.$textColor;
+        margin: 20px 0 20px;
+        font-size: 75px;
+        span {
+          color: c.$accent;
+        }
+        @include res.mq("sm") {
+          // font-size: 50px;
+          margin: 5px 0 5px;
+        }
+      }
+      h3 {
+        color: c.$textColor;
+        font-size: 25px;
+        // margin-bottom: 50px;
+        @include res.mq("sm") {
+          // font-size: 15px;
+        }
+      }
+      h4 {
+        color: c.$textColor;
+        letter-spacing: 2px;
+        font-size: 20px;
+        @include res.mq("sm") {
+          // font-size: 10px;
+        }
+      }
+    }
+  }
 }
 
 .about {
-    width: 100%;
-    padding: 100px 0;
-    background-color: c.$subColor;
-    .main {
-        width: 1130px;
-        display: flex;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: space-around;
-        @include res.mq('lg') {
-            width: 100%;
-        }
-        img {
-            width: 430px;
-            object-fit: cover;
-            border-radius: 20px;
-            @include res.mq('md') {
-                width: 20vh;
-                height: 50vh;
-            }
-            @include res.mq('sm') {
-                display: none;
-            }
-        }
-        .aboutText {
-            width: 550px;
-            h2 {
-                color: c.$textColor;
-                font-size: 75px;
-                margin-bottom: 20px;
-            }
-            h5 {
-                color: c.$textColor;
-                letter-spacing:  1px;
-                font-size: 22px;
-                margin-bottom: 25px;
-            }
-            p {
-                color: c.$textColor;
-                letter-spacing: 1px;
-                line-height: 25px;
-                margin-bottom: 45px;
-                font-size: 18px;
-            }
-        }
-        // button {
-            // @include b1.button;
-        // }
+  width: 100%;
+  padding: 100px 0;
+  background-color: c.$subColor;
+  .main {
+    width: 1130px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    @include res.mq("lg") {
+      width: 100%;
     }
+    .aboutText {
+      width: 550px;
+      h2 {
+        color: c.$textColor;
+        font-size: 75px;
+        margin-bottom: 20px;
+      }
+      h5 {
+        color: c.$textColor;
+        letter-spacing: 1px;
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+      p {
+        color: c.$textColor;
+        letter-spacing: 1px;
+        line-height: 25px;
+        margin-bottom: 45px;
+        font-size: 18px;
+      }
+    }
+  }
 }
 .portfolio {
-    background-color: c.$mainColor;
-    width: 100%;
-    padding: 100px 0;
-    .title{
-        h2 {
-            color: c.$textColor;
-            font-size: 75px;
-            margin: 30px auto;
-            text-align: center;
-        }
+  background-color: c.$mainColor;
+  width: 100%;
+  padding: 100px 0;
+  .title {
+    h2 {
+      color: c.$textColor;
+      font-size: 75px;
+      margin: 30px auto;
+      text-align: center;
     }
-    .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 400px;
-        @include res.mq('sm') {
-            flex-direction: column;
-        }
-        .card {
-            height: 350px; //390px
-            width: 365px;
-            background-color: c.$subColor;
-            padding: 20px 35px;
-            margin: 20px;
-            border-radius: 20px;
-            overflow: hidden;
-            text-align: center;
-            i {
-                color: c.$accent;
-                font-size: 50px;
-                margin: 25px 0;
-            }
-            h5 {
-                color: c.$textColor;
-                font-size: 23px;
-                margin-bottom: 30px;
-            }
-            .pragraph {
-                p {
-                    color: c.$textColor;
-                    font-size: 16px;
-                    line-height: 25px;
-                    margin-bottom: 30px;
-                }
-                // .button {
-                    // @include b1.button;
-                // }
-            }
-        }
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    @include res.mq("sm") {
+      flex-direction: column;
     }
+    .card {
+      height: 350px; //390px
+      width: 365px;
+      background-color: c.$subColor;
+      padding: 20px 35px;
+      margin: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      i {
+        color: c.$accent;
+        font-size: 50px;
+        margin: 25px 0;
+      }
+      h5 {
+        color: c.$textColor;
+        font-size: 23px;
+        margin-bottom: 30px;
+      }
+      .pragraph {
+        p {
+          color: c.$textColor;
+          font-size: 16px;
+          line-height: 25px;
+          margin-bottom: 30px;
+        }
+        // .button {
+        // @include b1.button;
+        // }
+      }
+    }
+  }
 }
 .contact {
-    width: 100%;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: c.$subColor;
-    p {
-        color: c.$textColor;
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 25px;
+  width: 100%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: c.$subColor;
+  p {
+    color: c.$textColor;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  .contact-button {
+    @include b1.button;
+    color: c.$textColor;
+    &:hover {
+      color: lightseagreen;
     }
-    .contact-button {
-        @include b1.button;
-        color: c.$textColor;
-        &:hover {
-            color: lightseagreen;
-        }
-    }
+  }
 }
 footer {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-color: c.$mainColor;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: c.$mainColor;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  p:nth-child(1) {
+    font-size: 30px;
+    color: c.$textColor;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  p:nth-child(2) {
+    color: c.$textColor;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+  }
+  .social {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    p:nth-child(1) {
-        font-size: 30px;
-        color: c.$textColor;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-weight: bold;
+    a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: c.$accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin: 22px 10px;
+      color: c.$textColor;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.3);
+      }
     }
-    p:nth-child(2) {
-        color: c.$textColor;
-        font-size: 17px;
-        width: 500px;
-        text-align: center;
-    }
-    .social {
-        display: flex;
-        a {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background-color: c.$accent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            margin: 22px 10px;
-            color: c.$textColor;
-            transition: all 0.3s;
-            &:hover {
-                transform: scale(1.3);
-            }
-        }
-    }
-    .end {
-        color: c.$textColor;
-        margin-top: 100px;
-        font-size: 16px;
-    }
-    .end2 {
-        color: c.$textColor;
-        font-size: 16px;
-    }
+  }
+  .end {
+    color: c.$textColor;
+    margin-top: 100px;
+    font-size: 16px;
+  }
+  .end2 {
+    color: c.$textColor;
+    font-size: 16px;
+  }
 }
 
-@keyframes navLinksFade{
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+@keyframes navLinksFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-  }
-  ::-webkit-scrollbar-track {
-    background: c.$mainColor;
-    // border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: lightseagreen;
-    border-radius: 10px;
-  }
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: c.$mainColor;
+  // border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: lightseagreen;
+  border-radius: 10px;
+}
