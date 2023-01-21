@@ -1,32 +1,18 @@
-// :root{
-    // @media (prefers-color-scheme: light) {
-        // --color-base: #f5f5f5;
-        // --color-sub: white;
-        // --color-text: black;
-    // }
-    // @media (prefers-color-scheme: dark) {
-        // --color-base: #101010;
-        // --color-sub: #191919;
-        // --color-text: white;
-    // }
-// }
-
-$accent: lightseagreen;
+$accent: #20b2aa;
 $mainColor: var(--color-base);
 $subColor: var(--color-sub);
 $textColor: var(--color-text);
 
-//add
 @mixin light-theme {
     --color-base: #f5f5f5;
-    --color-sub: white;
-    --color-text: black;
+    --color-sub: #ffffff;
+    --color-text: #000000;
 }
 
 @mixin dark-theme {
     --color-base: #101010;
     --color-sub: #191919;
-    --color-text: white;
+    --color-text: #ffffff;
 }
 
 @media (prefers-color-sheme: light) {

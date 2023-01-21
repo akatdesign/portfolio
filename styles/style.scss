@@ -53,7 +53,6 @@ header {
       display: flex;
       justify-content: space-around;
       width: 40%;
-      // padding-left: 900px;
       transition: all 0.5s ease-in-out;
       @include res.mq("md") {
         width: 55%;
@@ -93,9 +92,6 @@ header {
           color: c.$accent;
         }
       }
-      // .btn {
-      // @include b1.button;
-      // }
     }
     .burger {
       display: none;
@@ -184,7 +180,6 @@ header {
       h3 {
         color: c.$textColor;
         font-size: 25px;
-        // margin-bottom: 50px;
         @include res.mq("sm") {
           // font-size: 15px;
         }
@@ -258,7 +253,7 @@ header {
       flex-direction: column;
     }
     .card {
-      height: 350px; //390px
+      height: 350px;
       width: 365px;
       background-color: c.$subColor;
       padding: 20px 35px;
@@ -283,9 +278,6 @@ header {
           line-height: 25px;
           margin-bottom: 30px;
         }
-        // .button {
-        // @include b1.button;
-        // }
       }
     }
   }
@@ -308,7 +300,7 @@ header {
     @include b1.button;
     color: c.$textColor;
     &:hover {
-      color: lightseagreen;
+      color: c.$accent;
     }
   }
 }
@@ -380,9 +372,8 @@ footer {
 }
 ::-webkit-scrollbar-track {
   background: c.$mainColor;
-  // border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: lightseagreen;
+  background: c.$accent;
   border-radius: 10px;
 }

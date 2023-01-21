@@ -1,14 +1,13 @@
 @mixin button {
-    background-color: lightseagreen;
+    background-color: #20b2aa;
     padding: 13px 30px;
-    // color: white;
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
     transition: all 0.3s;
     &:hover {
         background-color: transparent;
-        border: 2px solid lightseagreen;
+        border: 2px solid #20b2aa;
         cursor: pointer;
             }
 }
