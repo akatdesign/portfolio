@@ -23,4 +23,20 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // 使用するscssファイルを指定
+  css: ["@/assets/styles/main.scss"],
+  // Viteのビルドの際に、SCSSのパーシャルファイルを読み込むよう指定する
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @use "~/assets/styles/_button1.scss" as b1;
+          @use "~/assets/styles/_responsive.scss" as res;
+          @use "~/assets/styles/_color.scss" as c;
+          `,
+        },
+      },
+    },
+  },
 })
