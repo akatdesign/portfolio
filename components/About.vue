@@ -1,50 +1,23 @@
 <template>
-     <div class="portfolio">
-        <div class="title">
-          <h2>Skils</h2>
-        </div>
-
-        <div class="box">
-          <div class="card">
-            <i class="fa-solid fa-code"></i>
-            <h5>Frontend Dev</h5>
-            <div class="pragraph">
-              <p>
-                HTML/CSS/JavaScript <br />
-                Sass(Scss) <br />
-                Vue(Nuxt) <br />
-                React(Next)
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <i class="fa-solid fa-terminal"></i>
-            <h5>Backend Dev</h5>
-            <div class="pragraph">
-              <p>
-                Python <br />
-                Nim(entry-level) <br />
-                C(entry-level)<br />
-                <br />
-                <br />
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <i class="fa-solid fa-gears"></i>
-            <h5>Other Tech</h5>
-            <div class="pragraph">
-              <p>
-                Docker <br />
-                Git <br />
-                GitHub<br />
-                Linux<br />
-                Figma<br />
-              </p>
-            </div>
+<section class="about">
+        <div class="main">
+          <div class="aboutText">
+            <h2>About Me</h2>
+            <h5>Jack of all trades</h5>
+            <p>
+              I make a variety of things. And I am interested in various things.
+              Besides the techniques listed here, I am interested in
+              illustration, graphic design, 3D, two-dimensional expression, etc.
+            </p>
+            <h5>College</h5>
+            <p>
+              I'm a student at a Kosen.I belong to the Department of Mechanical
+              Engineering.I am in the robotics research club.I am working on AI
+              and biotechnology.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 </template>
   
 <script>
