@@ -11,7 +11,7 @@
               <a href="https://twitter.com/akcatchang" class="btn">Contact</a>
             </li>
             <li>
-              <a id="toggleTheme">
+              <a @onClick="toggleTheme" id="toggleTheme">
                 <span>Dark</span>
               </a>
             </li>
@@ -27,7 +27,8 @@
       </header>
 </template>
   
-<script setup>
+<script>
+
 // const burger = document.querySelector(".burger");
 // const nav = document.querySelector(".nav-links");
 // const navLinks =document.querySelectorAll(".nav-links li");
