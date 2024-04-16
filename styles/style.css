@@ -1,27 +1,27 @@
 @media (prefers-color-sheme: light) {
   :root {
     --color-base: #f5f5f5;
-    --color-sub: white;
-    --color-text: black;
+    --color-sub: #ffffff;
+    --color-text: #000000;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-base: #101010;
     --color-sub: #191919;
-    --color-text: white;
+    --color-text: #ffffff;
   }
 }
 .light {
   --color-base: #f5f5f5;
-  --color-sub: white;
-  --color-text: black;
+  --color-sub: #ffffff;
+  --color-text: #000000;
 }
 
 .dark {
   --color-base: #101010;
   --color-sub: #191919;
-  --color-text: white;
+  --color-text: #ffffff;
 }
 
 * {
@@ -72,7 +72,7 @@ header nav .logo a {
   text-decoration: none;
 }
 header nav .logo span {
-  color: lightseagreen;
+  color: #20b2aa;
 }
 header nav .nav-active {
   transform: translateX(0%) !important;
@@ -111,7 +111,7 @@ header nav .nav-links li {
 }
 header nav .nav-links li #toggleTheme {
   cursor: pointer;
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   padding: 13px 30px;
   font-weight: bold;
   text-decoration: none;
@@ -120,7 +120,7 @@ header nav .nav-links li #toggleTheme {
 }
 header nav .nav-links li #toggleTheme:hover {
   background-color: transparent;
-  border: 2px solid lightseagreen;
+  border: 2px solid #20b2aa;
   cursor: pointer;
 }
 header nav .nav-links a {
@@ -134,7 +134,7 @@ header nav .nav-links a {
 header nav .nav-links a:hover {
   --d: 100%;
   --p: 100%;
-  color: lightseagreen;
+  color: #20b2aa;
 }
 header nav .burger {
   display: none;
@@ -148,7 +148,7 @@ header nav .burger {
 header nav .burger div {
   width: 25px;
   height: 3px;
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   margin: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -221,7 +221,7 @@ header nav .toggle .line3 {
   font-size: 75px;
 }
 .content .body .pInfo h1 span {
-  color: lightseagreen;
+  color: #20b2aa;
 }
 @media screen and (max-width: 768px) {
   .content .body .pInfo h1 {
@@ -266,7 +266,6 @@ header nav .toggle .line3 {
   color: var(--color-text);
   letter-spacing: 1px;
   font-size: 22px;
-  margin-bottom: 25px;
 }
 .about .main .aboutText p {
   color: var(--color-text);
@@ -309,7 +308,7 @@ header nav .toggle .line3 {
   text-align: center;
 }
 .portfolio .box .card i {
-  color: lightseagreen;
+  color: #20b2aa;
   font-size: 50px;
   margin: 25px 0;
 }
@@ -341,7 +340,7 @@ header nav .toggle .line3 {
   margin-bottom: 25px;
 }
 .contact .contact-button {
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   padding: 13px 30px;
   font-weight: bold;
   text-decoration: none;
@@ -351,11 +350,11 @@ header nav .toggle .line3 {
 }
 .contact .contact-button:hover {
   background-color: transparent;
-  border: 2px solid lightseagreen;
+  border: 2px solid #20b2aa;
   cursor: pointer;
 }
 .contact .contact-button:hover {
-  color: lightseagreen;
+  color: #20b2aa;
 }
 
 footer {
@@ -388,7 +387,7 @@ footer .social a {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,17 +409,6 @@ footer .end2 {
   font-size: 16px;
 }
 
-@-webkit-keyframes navLinksFade {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes navLinksFade {
   0% {
     opacity: 0;
@@ -440,6 +428,6 @@ footer .end2 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: lightseagreen;
+  background: #20b2aa;
   border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
