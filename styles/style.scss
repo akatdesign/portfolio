@@ -146,11 +146,11 @@ header {
       flex-direction: column;
       margin-left: -70px;
     }
-    img {
+    canvas {
       width: 80vh;
       height: 80vh;
-      object-fit: cover;
-      border-radius: 20px;
+      // object-fit: cover;
+      // border-radius: 20px;
       margin-top: -100px;
       @include res.mq("lg") {
         width: 50vh;
@@ -347,10 +347,6 @@ footer {
   .end {
     color: c.$textColor;
     margin-top: 100px;
-    font-size: 16px;
-  }
-  .end2 {
-    color: c.$textColor;
     font-size: 16px;
   }
 }
