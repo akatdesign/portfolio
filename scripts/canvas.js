@@ -28,7 +28,7 @@ function init() {
 
   scene.add(directionalLight);
 
-  camera.position.set(1000, 1000, 1000);
+  camera.position.set(400, 400, 400);
 
   camera.lookAt(0, 0, 0);
 

@@ -53,6 +53,7 @@ header {
       display: flex;
       justify-content: space-around;
       width: 40%;
+      margin-bottom: 30px;
       transition: all 0.5s ease-in-out;
       @include res.mq("md") {
         width: 55%;
@@ -167,13 +168,13 @@ header {
     .pInfo {
       h1 {
         color: c.$textColor;
-        margin: 20px 0 20px;
+        margin: 0 0 20px;
         font-size: 75px;
         span {
           color: c.$accent;
         }
         @include res.mq("sm") {
-          // font-size: 50px;
+          font-size: 50px;
           margin: 5px 0 5px;
         }
       }
@@ -181,16 +182,13 @@ header {
         color: c.$textColor;
         font-size: 25px;
         @include res.mq("sm") {
-          // font-size: 15px;
+          font-size: 20px;
         }
       }
       h4 {
         color: c.$textColor;
         letter-spacing: 2px;
         font-size: 20px;
-        @include res.mq("sm") {
-          // font-size: 10px;
-        }
       }
     }
   }
@@ -200,6 +198,9 @@ header {
   width: 100%;
   padding: 100px 0;
   background-color: c.$subColor;
+  @include res.mq("sm") {
+    padding: 100px 30px;
+  }
   .main {
     width: 1130px;
     display: flex;
