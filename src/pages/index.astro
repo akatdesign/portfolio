@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
+---
+
+<Layout title="akatdesign's portfolio">
+	<div class="wrapper">
+		<Header />
+		<!-- Content section -->
+		<div class="content">
+		  <div class="body">
+			<div class="pInfo">
+			  <h4>Jack of all trades</h4>
+			  <h1>akat<span>design</span></h1>
+			  <h3>Trust my expression will reach U.</h3>
+			  <h3 class="element"></h3>
+			</div>
+			<canvas id="webgl"></canvas>
+		  </div>
+		</div>
+  
+		<!-- about me section -->
+		<section class="about">
+		  <div class="main">
+			<div class="aboutText">
+			  <h2>About Me</h2>
+			  <h5>Jack of all trades</h5>
+			  <p>
+				I make a variety of things. And I am interested in various things.
+				Besides the techniques listed here, I am interested in
+				illustration, graphic design, 3D, two-dimensional expression, etc.
+			  </p>
+			  <h5>College</h5>
+			  <p>
+				I'm a student at a Kosen.I belong to the Department of Mechanical
+				Engineering.I am in the robotics research club.I am working on AI,
+				bioinformatics and robotics.
+			  </p>
+			</div>
+		  </div>
+		</section>
+		<!--portfolio section -->
+		<div class="portfolio">
+		  <div class="title">
+			<h2>Skils</h2>
+		  </div>
+  
+		  <div class="box">
+			<div class="card">
+			  <i class="fa-solid fa-code"></i>
+			  <h5>Frontend Dev</h5>
+			  <div class="pragraph">
+				<p>
+				  HTML/CSS/JavaScript <br />
+				  Sass(Scss) <br />
+				  Vue(Nuxt) <br />
+				  React(Next)
+				</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <i class="fa-solid fa-terminal"></i>
+			  <h5>Backend Dev</h5>
+			  <div class="pragraph">
+				<p>
+				  Python <br />
+				  Nim(entry-level) <br />
+				  C(entry-level)<br />
+				  <br />
+				  <br />
+				</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <i class="fa-solid fa-gears"></i>
+			  <h5>Other Tech</h5>
+			  <div class="pragraph">
+				<p>
+				  Docker <br />
+				  Git <br />
+				  Figma <br />
+				  Illustrator <br />
+				  Blender <br />
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- contact section -->
+		<div class="contact">
+		  <p>Contact.</p>
+		  <a href="https://twitter.com/akatdesign" class="contact-button"
+			>Contact</a
+		  >
+		</div>
+		<!-- footer section-->
+		<footer>
+		  <p>akatdesign</p>
+		  <p>Follow me!</p>
+		  <div class="social">
+			<a href="https://github.com/akcatchang"
+			  ><i class="fab fa-github"></i
+			></a>
+			<a href="https://twitter.com/akatdesign"
+			  ><i class="fab fa-twitter"></i
+			></a>
+		  </div>
+		  <p class="end">CopyRight@akatdesign</p>
+		</footer>
+  
+		<script src="../scripts/burger.js"></script>
+		<script src="../scripts/colorMode.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script src="../scripts/typed.js"></script>
+		<script src="https://unpkg.com/three@0.142.0/build/three.min.js"></script>
+		<script src="../scripts/canvas.js"></script>
+	  </div>
+</Layout>
+
+<style>
+
+</style>
