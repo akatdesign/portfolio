@@ -1,46 +1,23 @@
+---
+import Card from "../components/Card.astro";
+---
+
 <div class="portfolio">
     <div class="title">
       <h2>Skils</h2>
     </div>
-
     <div class="box">
-      <div class="card">
-        <i class="fa-solid fa-code"></i>
-        <h5>Frontend Dev</h5>
-        <div class="pragraph">
-          <p>
-            HTML/CSS/JavaScript <br />
-            Sass(Scss) <br />
-            Vue(Nuxt) <br />
-            React(Next)
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-terminal"></i>
-        <h5>Backend Dev</h5>
-        <div class="pragraph">
-          <p>
-            Python <br />
-            Nim(entry-level) <br />
-            C(entry-level)<br />
-            <br />
-            <br />
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-gears"></i>
-        <h5>Other Tech</h5>
-        <div class="pragraph">
-          <p>
-            Docker <br />
-            Git <br />
-            Figma <br />
-            Illustrator <br />
-            Blender <br />
-          </p>
-        </div>
-      </div>
+      <Card icon="fa-solid fa-code",
+            title="Frontend Dev",
+            skills="HTML/CSS/JavaScript, Sass(Scss), Vue(Nuxt), React(Next)"
+      />
+      <Card icon="fa-solid fa-terminal",
+            title="Backend Dev",
+            skills="Python, Nim(entry-level), C(entry-level)"
+      />
+      <Card icon="fa-solid fa-gears",
+            title="Other Tech",
+            skills="Docker, Git, Figma, Illustrator, Blender"
+      />
     </div>
 </div>
