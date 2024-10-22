@@ -9,5 +9,5 @@ export default defineConfig({
         }
     },
     site: 'https://akatdesign/github.io',
-    base: '/portfolio'
+    base: 'portfolio'
 });
