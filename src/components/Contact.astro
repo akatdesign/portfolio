@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  contactLink: string;
+}
+
+const {  title, contactLink  } = Astro.props;
+---
+<div class="contact">
+    <p>{title}</p>
+    <a href={contactLink} class="contact-button"
+      >Contact</a
+    >
+</div>

@@ -1,14 +1,12 @@
-@use "./button1" as b1;
-@use "./responsive" as res;
-@use "./color" as c;
+@use "src/styles/_button1.scss" as b1;
+@use "src/styles/_responsive.scss" as res;
+@use "src/styles/_color.scss" as c;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Chakra Petch", "M PLUS Rounded 1c", "Helvetica Neue",
-    "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial",
-    "Yu Gothic", "Meiryo", sans-serif;
+  font-family: "Chakra Petch", "M PLUS Rounded 1c", sans-serif;
 }
 .wrapper {
   @include res.mq("sm") {
@@ -39,11 +37,11 @@ header {
       letter-spacing: 1px;
       cursor: pointer;
       a {
-        color: c.$textColor;
+        background: linear-gradient(135deg, c.$textColor 0%, c.$accent 100%);
+        background: -webkit-linear-gradient(-45deg, c.$textColor 50%, c.$accent 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-decoration: none;
-      }
-      span {
-        color: c.$accent;
       }
     }
     .nav-active {
@@ -96,10 +94,10 @@ header {
     }
     .burger {
       display: none;
+      cursor: pointer;
       @include res.mq("sm") {
         display: block;
       }
-      cursor: pointer;
       div {
         width: 25px;
         height: 3px;
@@ -140,9 +138,6 @@ header {
     justify-content: space-evenly;
     padding-right: 50px;
     padding-left: 100px;
-    @include res.mq("lg") {
-      // margin-left: -150px;
-    }
     @include res.mq("sm") {
       flex-direction: column;
       margin-left: -70px;
@@ -150,8 +145,6 @@ header {
     canvas {
       width: 80vh;
       height: 80vh;
-      // object-fit: cover;
-      // border-radius: 20px;
       margin-top: -100px;
       @include res.mq("lg") {
         width: 50vh;
@@ -167,12 +160,12 @@ header {
     }
     .pInfo {
       h1 {
-        color: c.$textColor;
+        background: linear-gradient(135deg, c.$textColor 0%, c.$accent 100%);
+        background: -webkit-linear-gradient(-45deg, c.$textColor 50%, c.$accent 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin: 0 0 20px;
         font-size: 75px;
-        span {
-          color: c.$accent;
-        }
         @include res.mq("sm") {
           font-size: 50px;
           margin: 5px 0 5px;

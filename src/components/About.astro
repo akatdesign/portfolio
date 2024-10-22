@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+  firstSubtitle: string;
+  firstContent:string;
+  secondSubtitle: string;
+  secondContent:string
+}
+
+const {  title, firstSubtitle, firstContent, secondSubtitle, secondContent  } = Astro.props;
+---
+
+<section class="about">
+    <div class="main">
+      <div class="aboutText">
+        <h2>{title}</h2>
+        <h5>{firstSubtitle}</h5>
+        <p>{firstContent}</p>
+        <h5>{secondSubtitle}</h5>
+        <p>{secondContent}</p>
+      </div>
+    </div>
+  </section>

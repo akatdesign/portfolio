@@ -1,0 +1,24 @@
+---
+interface Props{
+    icon: string;
+    title: string;
+    skills: string;
+}
+
+const {  icon, title, skills  } = Astro.props;
+const skillList = skills.split(',');
+---
+
+<div class="card">
+    <i class={icon}></i>
+    <h5>{title}</h5>
+    <div class="pragraph">
+      <p>
+        {skillList.map(skill => (
+            <>
+                {skill.trim()} <br />
+            </>
+        ))}
+      </p>
+    </div>
+  </div>

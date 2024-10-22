@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+  subtitle: string;
+  message: string;
+  accent:string;
+}
+
+const {  title, subtitle, message, accent  } = Astro.props;
+---
+
+<div class="content">
+    <div class="body">
+      <div class="pInfo">
+        <h4>{subtitle}</h4>
+        <h1>{title}</h1>
+        <h3>{message}</h3>
+        <h3>{accent}</h3>
+      </div>
+      <canvas id="webgl"></canvas>
+    </div>
+</div>
