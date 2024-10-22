@@ -1,14 +1,24 @@
+---
+interface Props {
+	logo: string;
+  blogLink: string;
+  contactLink: string;
+}
+
+const {  logo, blogLink, contactLink  } = Astro.props;
+---
+
 <header>
     <nav>
       <h2 class="logo">
-        <a href="#">akatdesign</a>
+        <a href="#">{logo}</a>
       </h2>
       <ul class="nav-links">
         <li>
-          <a href="https://kamablog.netlify.app/">Blog</a>
+          <a href={blogLink}>Blog</a>
       </li>
         <li>
-          <a href="https://twitter.com/akatdesign" class="btn">Contact</a>
+          <a href={contactLink} class="btn">Contact</a>
         </li>
         <li>
           <a id="toggleTheme">

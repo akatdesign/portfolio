@@ -1,19 +1,23 @@
+---
+interface Props {
+	title: string;
+  firstSubtitle: string;
+  firstContent:string;
+  secondSubtitle: string;
+  secondContent:string
+}
+
+const {  title, firstSubtitle, firstContent, secondSubtitle, secondContent  } = Astro.props;
+---
+
 <section class="about">
     <div class="main">
       <div class="aboutText">
-        <h2>About Me</h2>
-        <h5>Jack of all trades</h5>
-        <p>
-          I make a variety of things. And I am interested in various things.
-          Besides the techniques listed here, I am interested in
-          illustration, graphic design, 3D, two-dimensional expression, etc.
-        </p>
-        <h5>College</h5>
-        <p>
-          I'm a student at a Kosen.I belong to the Department of Mechanical
-          Engineering.I am in the robotics research club.I am working on AI,
-          bioinformatics and robotics.
-        </p>
+        <h2>{title}</h2>
+        <h5>{firstSubtitle}</h5>
+        <p>{firstContent}</p>
+        <h5>{secondSubtitle}</h5>
+        <p>{secondContent}</p>
       </div>
     </div>
   </section>

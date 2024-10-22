@@ -1,13 +1,23 @@
+---
+interface Props {
+  title: string;
+  message: string;
+  github: string;
+  twitter: string;
+}
+
+const {  title, message, github, twitter  }  = Astro.props;
+---
 <footer>
-    <p>akatdesign</p>
-    <p>Follow me!</p>
+    <p>{title}</p>
+    <p>{message}</p>
     <div class="social">
-      <a href="https://github.com/akcatchang"
+      <a href={github}
         ><i class="fab fa-github"></i
       ></a>
-      <a href="https://twitter.com/akatdesign"
+      <a href={twitter}
         ><i class="fab fa-twitter"></i
       ></a>
     </div>
-    <p class="end">CopyRight@akatdesign</p>
+    <p class="end">CopyRight@{title}</p>
 </footer>
