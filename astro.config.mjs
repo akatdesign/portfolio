@@ -7,5 +7,7 @@ export default defineConfig({
         scss: {
             additionalData: `@import "src/styles/_responsive.scss", "src/styles/_color.scss", "src/styles/_button1.scss";`
         }
-    }
+    },
+    site: 'https://akatdesign/github.io',
+    base: '/portfolio'
 });
