@@ -1,14 +1,12 @@
-@use "./button1" as b1;
-@use "./responsive" as res;
-@use "./color" as c;
+@use "src/styles/_button1.scss" as b1;
+@use "src/styles/_responsive.scss" as res;
+@use "src/styles/_color.scss" as c;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Chakra Petch", "M PLUS Rounded 1c", "Helvetica Neue",
-    "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial",
-    "Yu Gothic", "Meiryo", sans-serif;
+  font-family: "Chakra Petch", "M PLUS Rounded 1c", sans-serif;
 }
 .wrapper {
   @include res.mq("sm") {
@@ -96,10 +94,10 @@ header {
     }
     .burger {
       display: none;
+      cursor: pointer;
       @include res.mq("sm") {
         display: block;
       }
-      cursor: pointer;
       div {
         width: 25px;
         height: 3px;
