@@ -1,4 +1,4 @@
-# akatdesign's portfolio
+# akat's portfolio
 
 > :) **Check portfolio?**
 > [click here!](https://akatdesign.github.io/portfolio/)
