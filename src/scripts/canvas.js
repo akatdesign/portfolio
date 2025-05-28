@@ -9,7 +9,7 @@ function init() {
 
   const scene = new THREE.Scene();
 
-  const camera = new THREE.PerspectiveCamera(45, 1 / 1);
+  const camera = new THREE.PerspectiveCamera(10, 1 / 1);
 
   const cubeGeometry = new THREE.BoxGeometry(200, 200, 200);
 
