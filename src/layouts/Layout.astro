@@ -1,8 +1,8 @@
 ---
-import '../styles/style.scss';
+import "../styles/style.scss";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,30 +10,48 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="/portfolio/favicon.ico" type="image/x-icon">
-		<link
-		  href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c"
-		  rel="stylesheet"
-		/>
-		<link
-		  href="https://fonts.googleapis.com/css?family=Chakra Petch"
-		  rel="stylesheet"
-		/>
-		<link
-		  rel="stylesheet"
-		  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-		  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-		  crossorigin="anonymous"
-		/>
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="wrapper">
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/portfolio/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra Petch"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+    />
+
+    <meta property="og:url" content="https://akatdesign.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="akat's portfolio" />
+    <meta
+      property="og:description"
+      content="akatのポートフォリオサイトです。"
+    />
+    <meta property="og:site_name" content="akat's portfolio" />
+    <meta
+      property="og:image"
+      content="https://github.com/user-attachments/assets/a611bc0e-9d16-4c96-9ca6-46eb6f3c4f15"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <slot />
+    </div>
+  </body>
 </html>
