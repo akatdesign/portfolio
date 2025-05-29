@@ -1,72 +1,71 @@
 ---
 interface Props {
-	title: string;
+  title: string;
   subtitle: string;
   message: string;
-  accent:string;
+  accent: string;
 }
 
-const {  title, subtitle, message, accent  } = Astro.props;
+const { title, subtitle, message, accent } = Astro.props;
 ---
 
 <div class="content">
-    <div class="body">
-      <div class="pInfo">
-        <h4>{subtitle}</h4>
-        <h1>{title}</h1>
-        <h3>{message}</h3>
-        <h3>{accent}</h3>
-      </div>
-      <canvas id="webgl"></canvas>
+  <div class="body">
+    <div class="pInfo">
+      <h4>{subtitle}</h4>
+      <h1>{title}</h1>
+      <h3>{message}</h3>
+      <h3>{accent}</h3>
     </div>
+    <canvas id="webgl"></canvas>
+  </div>
 </div>
 
 <script>
-import * as THREE from "three";
+  import * as THREE from "three";
 
-document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", init);
 
-function init() {
-  const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector("#webgl"),
-    alpha: true,
-    antialias: true,
-  });
+  function init() {
+    const renderer = new THREE.WebGLRenderer({
+      canvas: document.querySelector("#webgl") as HTMLCanvasElement,
+      alpha: true,
+      antialias: true,
+    });
 
-  const scene = new THREE.Scene();
+    const scene = new THREE.Scene();
 
-  const camera = new THREE.PerspectiveCamera(10, 1 / 1);
+    const camera = new THREE.PerspectiveCamera(10, 1 / 1);
 
-  const cubeGeometry = new THREE.BoxGeometry(200, 200, 200);
+    const cubeGeometry = new THREE.BoxGeometry(200, 200, 200);
 
-  const material = new THREE.MeshLambertMaterial({
-    color: 0x20b2aa,
-  });
+    const material = new THREE.MeshLambertMaterial({
+      color: 0x20b2aa,
+    });
 
-  const cubeMesh = new THREE.Mesh(cubeGeometry, material);
+    const cubeMesh = new THREE.Mesh(cubeGeometry, material);
 
-  scene.add(cubeMesh);
+    scene.add(cubeMesh);
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff);
+    const directionalLight = new THREE.DirectionalLight(0xffffff);
 
-  directionalLight.position.set(200, 300, 100);
+    directionalLight.position.set(200, 300, 100);
 
-  directionalLight.lookAt(0, 0, 0);
+    directionalLight.lookAt(0, 0, 0);
 
-  scene.add(directionalLight);
+    scene.add(directionalLight);
 
-  camera.position.set(400, 400, 400);
+    camera.position.set(400, 400, 400);
 
-  camera.lookAt(0, 0, 0);
+    camera.lookAt(0, 0, 0);
 
-  tick();
+    tick();
 
-  function tick() {
-    requestAnimationFrame(tick);
+    function tick() {
+      requestAnimationFrame(tick);
 
-    cubeMesh.rotation.y += 0.01;
-    renderer.render(scene, camera);
+      cubeMesh.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
   }
-}
-
 </script>
