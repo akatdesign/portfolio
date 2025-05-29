@@ -1,36 +1,4 @@
 $accent: #20b2aa;
-$mainColor: var(--color-base);
-$subColor: var(--color-sub);
-$textColor: var(--color-text);
-
-@mixin light-theme {
-    --color-base: #f5f5f5;
-    --color-sub: #ffffff;
-    --color-text: #000000;
-}
-
-@mixin dark-theme {
-    --color-base: #101010;
-    --color-sub: #191919;
-    --color-text: #ffffff;
-}
-
-@media (prefers-color-sheme: light) {
-    :root {
-        @include light-theme;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        @include dark-theme;
-    }
-}
-
-.light {
-    @include light-theme;
-}
-
-.dark {
-    @include dark-theme;
-}
+$mainColor: #101010;
+$subColor: #191919;
+$textColor: #ffffff;

@@ -72,10 +72,6 @@ header {
         @include res.mq("sm") {
           opacity: 0;
         }
-        #toggleTheme {
-          cursor: pointer;
-          @include b1.button;
-        }
       }
       a {
         position: relative;
