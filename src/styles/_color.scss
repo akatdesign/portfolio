@@ -23,7 +23,7 @@ $textColor: var(--color-text);
 
 @media (prefers-color-scheme: dark) {
     :root {
-        @include dark-theme()
+        @include dark-theme;
     }
 }
 
